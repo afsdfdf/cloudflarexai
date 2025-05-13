@@ -1,0 +1,110 @@
+{
+  "data": [
+    {
+      "id": "hot",
+      "name_en": "Hot",
+      "name_zh": "热门"
+    },
+    {
+      "id": "meme",
+      "name_en": "Meme",
+      "name_zh": "Meme"
+    },
+    {
+      "id": "gainer",
+      "name_en": "Gainers",
+      "name_zh": "涨幅榜"
+    },
+    {
+      "id": "solana",
+      "name_en": "Solana",
+      "name_zh": "Solana"
+    },
+    {
+      "id": "new",
+      "name_en": "New",
+      "name_zh": "新币"
+    },
+    {
+      "id": "bsc",
+      "name_en": "BSC",
+      "name_zh": "BSC"
+    },
+    {
+      "id": "loser",
+      "name_en": "Losers",
+      "name_zh": "跌幅榜"
+    },
+    {
+      "id": "eth",
+      "name_en": "Ethereum",
+      "name_zh": "Ethereum"
+    },
+    {
+      "id": "base",
+      "name_en": "Base",
+      "name_zh": "Base"
+    },
+    {
+      "id": "depin",
+      "name_en": "Depin",
+      "name_zh": "Depin"
+    },
+    {
+      "id": "ai",
+      "name_en": "AI",
+      "name_zh": "AI"
+    },
+    {
+      "id": "l2",
+      "name_en": "L2",
+      "name_zh": "L2"
+    },
+    {
+      "id": "gamefi",
+      "name_en": "GameFi",
+      "name_zh": "GameFi"
+    },
+    {
+      "id": "rwa",
+      "name_en": "RWA",
+      "name_zh": "RWA"
+    },
+    {
+      "id": "arbitrum",
+      "name_en": "Arbitrum",
+      "name_zh": "Arbitrum"
+    },
+    {
+      "id": "blast",
+      "name_en": "Blast",
+      "name_zh": "Blast"
+    },
+    {
+      "id": "polygon",
+      "name_en": "Polygon",
+      "name_zh": "Polygon"
+    },
+    {
+      "id": "optimism",
+      "name_en": "Optimism",
+      "name_zh": "Optimism"
+    },
+    {
+      "id": "avalanche",
+      "name_en": "Avalanche",
+      "name_zh": "Avalanche"
+    },
+    {
+      "id": "merlin",
+      "name_en": "Merlin",
+      "name_zh": "Merlin"
+    },
+    {
+      "id": "BSC-Meme-Boost",
+      "name_en": "BSC Meme 4M",
+      "name_zh": "BSC Meme交易大赛"
+    }
+  ],
+  "timestamp": 1747094415712
+}

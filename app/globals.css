@@ -1,0 +1,266 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* 隐藏滚动条但保留滚动功能 */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  /* WebKit浏览器的滚动条隐藏 */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* 平滑过渡效果 */
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+  }
+  
+  /* 悬停放大效果 */
+  .hover-scale {
+    transition: transform 0.2s ease;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+  
+  /* 渐变文字 */
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  /* 微妙阴影效果 */
+  .subtle-shadow {
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .dark .subtle-shadow {
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Hide scrollbar but maintain functionality */
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari, Opera */
+  }
+}
+
+@layer base {
+  :root {
+    /* 亮色主题 - 主要颜色 */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    
+    /* 亮色主题 - 卡片和弹出窗口 */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    
+    /* 亮色主题 - 主题色 */
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    
+    /* 亮色主题 - 辅助色 */
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    
+    /* 亮色主题 - 功能色 */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 98%;
+    
+    /* 亮色主题 - 边框和输入 */
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    
+    /* 亮色主题 - 图表颜色 */
+    --chart-1: 217 91% 60%;
+    --chart-2: 162 94% 24%;
+    --chart-3: 190 98% 50%;
+    --chart-4: 130 94% 40%;
+    --chart-5: 45 93% 47%;
+    
+    /* 亮色主题 - 圆角和其他 */
+    --radius: 0.75rem;
+    
+    /* 亮色主题 - 侧边栏 */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 214 32% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 217 91% 60%;
+    
+    /* 亮色主题 - 主题色变种 */
+    --primary-light: 217 91% 75%;
+    --primary-dark: 217 91% 50%;
+    --primary-muted: 217 60% 92%;
+    
+    /* 亮色主题 - 渐变 */
+    --gradient-primary: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(230, 91%, 65%));
+    --gradient-success: linear-gradient(135deg, hsl(142, 76%, 36%), hsl(160, 84%, 39%));
+    --gradient-warning: linear-gradient(135deg, hsl(45, 93%, 47%), hsl(32, 95%, 44%));
+    --gradient-destructive: linear-gradient(135deg, hsl(0, 84%, 60%), hsl(350, 89%, 60%));
+  }
+  
+  .dark {
+    /* 暗色主题 - 主要颜色 */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    
+    /* 暗色主题 - 卡片和弹出窗口 */
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    
+    /* 暗色主题 - 主题色 */
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    
+    /* 暗色主题 - 辅助色 */
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    
+    /* 暗色主题 - 功能色 */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --success: 142 69% 58%;
+    --success-foreground: 0 0% 98%;
+    --warning: 40 96% 62%;
+    --warning-foreground: 0 0% 98%;
+    
+    /* 暗色主题 - 边框和输入 */
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    
+    /* 暗色主题 - 图表颜色 */
+    --chart-1: 217 91% 60%;
+    --chart-2: 160 84% 45%;
+    --chart-3: 30 90% 60%;
+    --chart-4: 280 75% 65%;
+    --chart-5: 330 90% 65%;
+    
+    /* 暗色主题 - 侧边栏 */
+    --sidebar-background: 224 71% 4%;
+    --sidebar-foreground: 213 31% 91%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 216 34% 17%;
+    --sidebar-accent-foreground: 213 31% 91%;
+    --sidebar-border: 216 34% 17%;
+    --sidebar-ring: 217 91% 60%;
+    
+    /* 暗色主题 - 主题色变种 */
+    --primary-light: 217 70% 65%;
+    --primary-dark: 217 91% 50%;
+    --primary-muted: 217 40% 30%;
+    
+    /* 暗色主题 - 渐变 */
+    --gradient-primary: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(230, 91%, 65%));
+    --gradient-success: linear-gradient(135deg, hsl(142, 69%, 58%), hsl(160, 64%, 52%));
+    --gradient-warning: linear-gradient(135deg, hsl(40, 96%, 62%), hsl(32, 95%, 58%));
+    --gradient-destructive: linear-gradient(135deg, hsl(0, 84%, 60%), hsl(350, 89%, 60%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  /* 添加平滑滚动 */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* 更好的焦点样式 */
+  :focus-visible {
+    outline-offset: 2px;
+    outline: 2px solid hsl(var(--ring));
+  }
+  
+  /* 按钮点击反馈 */
+  button:active:not(:disabled) {
+    transform: translateY(1px);
+  }
+}
+
+/* 确保样式生效 */
+#__next-build-watcher,
+.__next-build-watcher,
+.nextjs-container-build-in-progress,
+.nextjs-container-root-error-layout { 
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+
+/* 自定义动画 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-pulse-subtle {
+  animation: pulse 2s infinite;
+}

@@ -1,0 +1,61 @@
+{
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install --legacy-peer-deps",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "images": {
+    "sizes": [16, 32, 48, 64, 96, 128, 256, 384],
+    "domains": ["assets.coingecko.com", "www.logofacade.com", "www.iconaves.com", "cryptologos.cc", "example.com"],
+    "remotePatterns": [
+      {
+        "protocol": "https",
+        "hostname": "assets.coingecko.com"
+      },
+      {
+        "protocol": "https",
+        "hostname": "www.logofacade.com"
+      },
+      {
+        "protocol": "https",
+        "hostname": "*.ave-api.com"
+      },
+      {
+        "protocol": "https",
+        "hostname": "www.iconaves.com"
+      },
+      {
+        "protocol": "https",
+        "hostname": "cryptologos.cc"
+      },
+      {
+        "protocol": "https",
+        "hostname": "example.com"
+      }
+    ]
+  },
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)\\.(jpg|jpeg|gif|png|svg|ico|webp)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/favicon.ico",
+      "destination": "/logo.png",
+      "permanent": true
+    }
+  ]
+} 
